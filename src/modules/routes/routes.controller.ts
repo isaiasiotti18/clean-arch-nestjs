@@ -33,7 +33,7 @@ export class RoutesController {
     return this.listAllRoutesUseCase.execute();
   }
 
-  @Get(':id')
+  @Get('/:id/findbyid')
   findOne(@Param('id') id: string) {
     return this.findRouteByIdUseCase.execute(id);
   }
