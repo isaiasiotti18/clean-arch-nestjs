@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { RoutesModule } from './routes/routes.module';
+import { RoutesModule } from './modules/routes/routes.module';
 
 @Module({
   imports: [RoutesModule],

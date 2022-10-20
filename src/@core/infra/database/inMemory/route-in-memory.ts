@@ -1,9 +1,9 @@
-import { Route } from "../../../domain/entities/route.entity";
-import { RouteRepositoryInterface } from "../../../domain/repositories/route.repository";
+import { Route } from '../../../domain/entities/route.entity';
+import { RouteRepositoryInterface } from '../../../domain/repositories/route.repository';
 
 export class RouteInMemoryRepository implements RouteRepositoryInterface {
   items: Route[] = [];
-  
+
   async insert(route: Route): Promise<void> {
     this.items.push(route);
   }
@@ -13,6 +13,6 @@ export class RouteInMemoryRepository implements RouteRepositoryInterface {
   }
 
   async findById(id: string): Promise<Route | undefined> {
-    return this.items.find(route => route.id === id)
+    return this.items.find((route) => route.id === id);
   }
 }

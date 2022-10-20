@@ -1,5 +1,5 @@
-import { LatLng, Route } from "../../domain/entities/route.entity";
-import { RouteRepositoryInterface } from "../../domain/repositories/route.repository";
+import { LatLng, Route } from '../../domain/entities/route.entity';
+import { RouteRepositoryInterface } from '../../domain/repositories/route.repository';
 //não services do Nest.js - casos de uso vão ser o service
 //services do Nest.js usam os casos
 export class CreateRouteUseCase {
@@ -20,7 +20,7 @@ type CreateRouteInput = {
 };
 
 type CreateRouteOutput = {
-  id: string,
+  id: string;
   title: string;
   startPosition: LatLng;
   endPosition: LatLng;

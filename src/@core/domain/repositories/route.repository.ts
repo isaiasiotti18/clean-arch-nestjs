@@ -1,6 +1,7 @@
-import { Route } from "../entities/route.entity";
+import { Route } from '../entities/route.entity';
 
-export interface RouteRepositoryInterface{
+export interface RouteRepositoryInterface {
   insert(route: Route): Promise<void>;
-  findAll(): Promise<Route[]>
+  findAll(): Promise<Route[]>;
+  findById(id: string): Promise<Route | undefined>;
 }
